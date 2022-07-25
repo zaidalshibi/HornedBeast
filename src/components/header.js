@@ -1,9 +1,14 @@
 import React from "react";
+import Navegate from "./nav-bar.js";
 
 class Header extends React.Component {
+
   render() {
     return (
-      <h1>Horned Beasts</h1>
+      <>
+        <Navegate />
+     </>
+
     );
   }
 }
