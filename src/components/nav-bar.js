@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 
+
 function Navegate() {
   return (
     <Navbar bg="light" expand="lg">
