@@ -3,22 +3,32 @@ import Card from 'react-bootstrap/Card';
 
 
 class HornedBeasts extends React.Component {
-    constructor(props) {
+      constructor(props) {
         super(props);
         this.state = {
           count: 0,
         };
       }
+
+      handleModal = () => {
+        this.props.selectedBeast(this.props.arr);
+        this.props.modalShow(true);
+      }
     
-      handleClick = () => {
+      handleCount = () => {
         this.setState({
           count: this.state.count + 1,
         });
-    }
+      }
+      handleClick = () => {
+       this.handleModal();
+       this.handleCount(); 
+    };
+
     render() {
         return (
-            <Card>
-                <Card.Img variant="top" src={this.props.imgUrl} onClick={this.handleClick} />
+            <Card onClick={this.handleClick}>
+                <Card.Img variant="top" src={this.props.image_url}  />
                 <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.description}</Card.Text>
