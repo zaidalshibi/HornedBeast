@@ -4,12 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Time Estimate
 
-Number and name of feature: feature 1+2+3 (Display images , Allow users to vote for their favorite beast , Bootstrap)
+Number and name of feature: feature 1 (adding the modal feature)
+Estimate of time needed to complete: 10 hours
 
-Estimate of time needed to complete: 6 hours
+Start time: 1:30
 
-Start time: 2:00
+Finish time: 7:30
 
-Finish time: 6:06
-
-Actual time needed to complete: 4 hours
+Actual time needed to complete: 6 hours
