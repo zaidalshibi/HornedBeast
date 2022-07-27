@@ -3,8 +3,8 @@ import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
 import Modal from "./components/selected-beast";
-import beasts from './data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
+let arr= require('./data.json')
 
 
 
@@ -14,6 +14,7 @@ class App extends React.Component {
     this.state = {
       selectedBeast: '',
       showModal: false,
+      beasts: 0,
     };
   }
 
@@ -30,11 +31,17 @@ class App extends React.Component {
     });
   }
 
+  filtered = (hornsNum) => {
+    this.setState({
+      beasts: hornsNum
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Main data={beasts} selectedBeast={this.handleSelect} />
+        <Main data={arr} selectedBeast={this.handleSelect} dataSelected={this.state.beasts} filtered={this.filtered} />
         <Footer />
         <Modal
           show={this.state.showModal}
