@@ -9,8 +9,7 @@ class Header extends React.Component {
     return (
       <>
         <Navegate />
-     </>
-
+      </>
     );
   }
 }
